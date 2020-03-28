@@ -1,5 +1,18 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+IMPORTANT:
+
+The API endpoint /get_info returned one block Number per every call, which according to the requirement to display 10 recent blocks
+to happen needs to be called 10 times.
+
+Called the API 10 times but returned the same block number every time which I then used to get the block details.
+
+To overcome this, tried to call until I got a differrent block number; this pushed towards too much of traffic and the application was lagging considerably.
+
+With the endpoints provided, I decided to make a call for a single block number and for every subsequent get details call, used the block number -10
+
+
 ## Available Scripts
 
 In the project directory, you can run:
